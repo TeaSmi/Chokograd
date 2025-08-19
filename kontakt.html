@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<title>Čokograd – Kontakt</title>
+<link rel="icon" type="image/png" href="/Cokograd/slike/favicon.png">
+</head>
+<body>
+    <header>
+        <img src="./slike/logo.png" alt="Čokograd logo" width="220">
+    </header>
+    
+    <nav>
+    <a href="./index.html">Početna</a> |
+    <a href="./o-nama.html">O nama</a> |
+    <a href="./galerija.html">Galerija</a> |
+    <a href="./prodavnica.html">Prodavnica</a> |
+    <a href="./kontakt.html">Kontakt</a>
+    </nav>
+<main>
+<h1>Kontakt / Poruči</h1>
+
+<form action="#" method="post">
+    <label>Ime i prezime</label><br>
+    <input type="text" name="ime" required><br><br>
+
+    <label>Email adresa</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Telefon</label><br>
+    <input type="tel" name="telefon" required><br><br>
+
+    <label>Adresa isporuke</label><br>
+    <input type="text" name="adresa" required><br><br>
+
+    <label>Izbor proizvoda</label><br>
+    <select name="proizvod" required>
+        <option value="">-- Izaberite --</option>
+        <option>Čokolada – Lešnik</option>
+        <option>Čokolada – Badem</option>
+        <option>Čokolada – Šljiva</option>
+        <option>Čokolada – Višnja</option>
+        <option>Čokolada – Lubenica</option>
+    </select><br><br>
+
+    <label>Količina</label><br>
+    <input type="number" name="kolicina" min="1" value="1" required><br><br>
+
+    <fieldset>
+        <legend>Način plaćanja</legend>
+        <label><input type="radio" name="placanje" value="kartica" required> Kartica</label>
+        <label><input type="radio" name="placanje" value="pouzece"> Pouzeće</label>
+    </fieldset><br>
+
+    <label>Napomena</label><br>
+    <textarea name="napomena" rows="4"></textarea><br><br>
+
+    <button type="submit">Pošalji</button>
+</form>
+
+<p>Kontakt email: <a href="mailto:info@cokograd.rs">info@cokograd.rs</a></p>
+</main>
+
+<footer>
+    <p>Designed by Tea © 2025 Čokograd</p>
+    <p>
+    <a href="https://facebook.com">Facebook</a> |
+    <a href="https://instagran.com">Instagram</a> 
+    </p>
+    </footer>
+</body>
+</html>
