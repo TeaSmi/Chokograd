@@ -1,88 +1,71 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-<meta charset="utf-8">
-<title>Čokograd – Prodavnica</title>
-<link rel="icon" type="image/png" href="./slike/favicon.png">
-<link rel="stylesheet" href="./css/style.css">
+    <meta charset="utf-8">
+    <title>Čokograd - Prodavnica</title>
+    <link rel="icon" type="image/png" href="./slike/favicon.png">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header>
-        <img src="./slike/logo.png" alt="Čokograd logo" width="220">
-    </header>
-    
-    <nav>
-    <a href="./index.html">Početna</a> |
-    <a href="./o-nama.html">O nama</a> |
-    <a href="./galerija.html">Galerija</a> |
-    <a href="./prodavnica.html">Prodavnica</a> |
+
+<header>
+    <img src="./slike/logo.png" alt="Čokograd logo" class="logo">
+    <h1>Čokograd</h1>
+    <p>Grad ručno pravljenih čokolada</p>
+</header>
+
+<nav>
+    <a href="./index.html">Početna</a>
+    <a href="./o-nama.html">O nama</a>
+    <a href="./prodavnica.html">Prodavnica</a>
     <a href="./kontakt.html">Kontakt</a>
-    </nav>
+</nav>
+
 <main>
-<h1>Prodavnica</h1>
+    <h2>Prodavnica</h2>
 
-<section>
-<h3>Čokolada – Lešnik</h3>
-<img src="./slike/galerija_1.png" alt="Čokolada – Lešnik" width="300">
-<p>Čokolada sa lešnikom].</p>
-<p>Cena: 400 RSD</p>
-<p><a href="./kontakt.html">Poruči odmah</a></p>
-</section>
+    <section class="pretraga-box">
+        <label for="pretraga">Pretraži proizvod:</label>
+        <input type="text" id="pretraga" placeholder="Unesi naziv čokolade">
+        <button id="dugmePretraga">Pretraži</button>
+        <button id="dugmePrikaziSve">Prikaži sve</button>
+    </section>
 
-<section>
-<h3>Čokolada – Badem</h3>
-<img src="./slike/galerija_2.png" alt="Čokolada – Badem" width="300">
-<p>Čokolada sa bademom.</p>
-<p>Cena: 420 RSD</p>
-<p><a href="./kontakt.html">Poruči odmah</a></p>
-</section>
+    <section id="listaProizvoda" class="proizvodi"></section>
 
-<section>
-<h3>Čokolada – Šljiva</h3>
-<img src="./slike/galerija_3.png" alt="Čokolada – Šljiva" width="300">
-<p>Čokolada sa šljivama.</p>
-<p>Cena: 410 RSD</p>
-<p><a href="./kontakt.html">Poruči odmah</a></p>
-</section>
+    <section class="forma-box">
+        <h2>Forma za poručivanje</h2>
 
-<section>
-<h3>Čokolada – Višnja</h3>
-<img src="./slike/galerija_4.png" alt="Čokolada – Višnja" width="300">
-<p>Čpkolada sa višnjama.</p>
-<p>Cena: 430 RSD</p>
-<p><a href="./kontakt.html">Poruči odmah</a></p>
-</section>
+        <form id="formaPorudzbine">
+            <label for="ime">Ime i prezime</label>
+            <input type="text" id="ime" required>
 
-<section>
-<h3>Čokolada – Lubenica</h3>
-<img src="./slike/galerija_5.png" alt="Čokolada – Lubenica" width="300">
-<p>Čokolada sa lubenicom.</p>
-<p>Cena: 400 RSD</p>
-<p><a href="./kontakt.html">Poruči odmah</a></p>
-</section>
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
 
-<h2>Cenovnik</h2>
-<table border="1" cellpadding="6" cellspacing="0">
-<thead>
-<tr><th>Proizvod</th><th>Cena</th><th>Akcija</th></tr>
-</thead>
-<tbody>
-<tr><td>Čokolada – Lešnik</td><td>350 RSD</td><td><a href="./kontakt.html">Poruči odmah</a></td></tr>
-<tr><td>Čokolada – Badem</td><td>420 RSD</td><td><a href="./kontakt.html">Poruči odmah</a></td></tr>
-<tr><td>Čokolada – Šljiva</td><td>410 RSD</td><td><a href="./kontakt.html">Poruči odmah</a></td></tr>
-<tr><td>Čokolada – Višnja</td><td>430 RSD</td><td><a href="./kontakt.html">Poruči odmah</a></td></tr>
-<tr><td>Čokolada – Lubenica</td><td>400 RSD</td><td><a href="./kontakt.html">Poruči odmah</a></td></tr>
-</tbody>
-</table>
+            <label for="proizvod">Izaberi proizvod</label>
+            <select id="proizvod" required></select>
 
+            <label for="kolicina">Količina</label>
+            <input type="number" id="kolicina" min="1" value="1" required>
+
+            <label for="placanje">Način plaćanja</label>
+            <select id="placanje" required>
+                <option value="kartica">Kartica</option>
+                <option value="pouzece">Pouzeće</option>
+            </select>
+
+            <button type="submit">Pošalji porudžbinu</button>
+        </form>
+
+        <div id="poruka" class="poruka"></div>
+    </section>
 </main>
 
 <footer>
-    <p>Designed by Tea © 2025 Čokograd</p>
-    <p>
-    <a href="https://facebook.com">Facebook</a> |
-    <a href="https://instagran.com">Instagram</a> 
-    </p>
-    </footer>
+    <p>Designed by Tea © 2026 Čokograd</p>
+</footer>
+
+<script src="./js/script.js"></script>
 </body>
 </html>
